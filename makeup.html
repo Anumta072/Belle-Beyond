@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Belle &amp; Beyond — Beauty, Without the Noise</title>
+<title>Makeup — Belle &amp; Beyond</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="landing.css">
@@ -22,18 +22,18 @@
     <nav class="primary-nav" id="primaryNav">
       <div class="nav-item" data-slide="0"><a href="#home">Home</a></div>
       <div class="nav-item" data-slide="1" data-category="skincare">
-        <a href="skincare.html">Skincare</a>
+        <a href="#shop">Skincare</a>
         <div class="dropdown">
-          <a href="skincare.html">Cleansers</a>
-          <a href="skincare.html">Serums</a>
-          <a href="skincare.html">Moisturizers</a>
-          <a href="skincare.html">Sunscreen</a>
-          <a href="skincare.html">Face Masks</a>
-          <a href="skincare.html">Eye Care</a>
+          <a href="#shop">Cleansers</a>
+          <a href="#shop">Serums</a>
+          <a href="#shop">Moisturizers</a>
+          <a href="#shop">Sunscreen</a>
+          <a href="#shop">Face Masks</a>
+          <a href="#shop">Eye Care</a>
         </div>
       </div>
       <div class="nav-item" data-slide="2" data-category="makeup">
-        <a href="makeup.html">Makeup</a>
+        <a href="#shop">Makeup</a>
         <div class="dropdown">
           <a href="#shop">Foundation</a>
           <a href="#shop">Lip Colour</a>
@@ -61,7 +61,7 @@
 <section class="hero" id="home">
   <div class="hero-track" id="heroTrack">
  
-    <div class="hero-slide is-active" data-slide="0">
+    <div class="hero-slide" data-slide="0">
       <div class="hero-copy">
         <h1>Beauty, without the noise.</h1>
         <p>One home for skincare, makeup and haircare — made to work quietly, not shout for attention.</p>
@@ -83,7 +83,7 @@
       </div>
     </div>
  
-    <div class="hero-slide" data-slide="2">
+    <div class="hero-slide is-active" data-slide="2">
       <div class="hero-copy">
         <h1>Makeup that still lets skin breathe.</h1>
         <p>Buildable, skin-first colour with clean pigments — made to enhance your face, not cover it up.</p>
@@ -111,9 +111,9 @@
   <button class="hero-arrow next" id="heroNext" aria-label="Next slide">&#8250;</button>
  
   <div class="hero-dots" id="heroDots">
-    <button class="dot is-active" data-slide="0" aria-label="Home"></button>
+    <button class="dot" data-slide="0" aria-label="Home"></button>
     <button class="dot" data-slide="1" aria-label="Skincare"></button>
-    <button class="dot" data-slide="2" aria-label="Makeup"></button>
+    <button class="dot is-active" data-slide="2" aria-label="Makeup"></button>
     <button class="dot" data-slide="3" aria-label="Haircare"></button>
   </div>
 </section>
@@ -123,8 +123,8 @@
 </div>
  
 <div class="section-head" id="shop">
-  <h2>Best sellers</h2>
-  <p id="productCount">8 of 8 products</p>
+  <h2>Makeup</h2>
+  <p id="productCount">6 of 6 products</p>
 </div>
  
 <div class="product-grid" id="productGrid">
@@ -165,6 +165,7 @@
   </div>
 </aside>
  
+<script>window.PAGE_CONFIG = { defaultCategory: 'makeup' };</script>
 <script src="script.js"></script>
 </body>
 </html>
