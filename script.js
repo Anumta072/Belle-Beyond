@@ -192,19 +192,15 @@ function renderCategoryStrip() {
 }
 
 function initCategoryNav() {
-  document.querySelectorAll('.nav-item[data-category]').forEach((item) => {
-    const link = item.querySelector('a');
-    if (!link) return;
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      renderProductGrid(item.getAttribute('data-category'));
-      document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
-    });
-  });
+  // Main navigation links should open their respective pages normally
+  // Do not preventDefault() and do not scroll to #shop.
 
   const homeLink = document.querySelector('.nav-item[data-slide="0"] a');
+
   if (homeLink) {
-    homeLink.addEventListener('click', () => renderProductGrid('best'));
+    homeLink.addEventListener('click', () => {
+      renderProductGrid('best');
+    });
   }
 }
 
