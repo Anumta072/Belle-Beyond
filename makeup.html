@@ -9,81 +9,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
 
-<header class="site-header">
-    <div class="header-inner">
-
-        <a href="#home" class="brand">
-            <span class="brand-mark">B&amp;B</span>
-            <span class="brand-name">
-                Belle &amp; Beyond
-                <small>BEAUTY</small>
-            </span>
-        </a>
-
-        <nav class="main-nav" aria-label="Main navigation">
-
-            <div class="nav-item">
-                <a href="#home">Home</a>
-            </div>
-
-            <div class="nav-item has-dropdown">
-                <a href="#skincare">
-                    Skincare
-                    <span class="chevron">⌄</span>
-                </a>
-
-                <div class="dropdown">
-                    <a href="#skincare">Cleansers</a>
-                    <a href="#skincare">Serums</a>
-                    <a href="#skincare">Moisturizers</a>
-                    <a href="#skincare">Sunscreen</a>
-                    <a href="#skincare">Face Masks</a>
-                </div>
-            </div>
-
-            <div class="nav-item has-dropdown active">
-                <a href="#makeup">
-                    Makeup
-                    <span class="chevron">⌄</span>
-                </a>
-
-                <div class="dropdown">
-                    <a href="#makeup">Foundation</a>
-                    <a href="#makeup">Lip Colour</a>
-                    <a href="#makeup">Eyes</a>
-                    <a href="#makeup">Blush &amp; Bronzer</a>
-                    <a href="#makeup">Highlighter</a>
-                </div>
-            </div>
-
-            <div class="nav-item has-dropdown">
-                <a href="#haircare">
-                    Haircare
-                    <span class="chevron">⌄</span>
-                </a>
-
-                <div class="dropdown">
-                    <a href="#haircare">Shampoo</a>
-                    <a href="#haircare">Conditioner</a>
-                    <a href="#haircare">Hair Oils</a>
-                    <a href="#haircare">Styling</a>
-                </div>
-            </div>
-
-        </nav>
-
-        <button class="cart-button" type="button" aria-label="Shopping cart">
-            <span>Cart</span>
-            <span class="cart-count">0</span>
-        </button>
-
-    </div>
+<header id="mainHeader">
+  <div class="header-inner">
+    <a href="landing.html" class="brand">
+      <img src="logo.png" alt="Belle & Beyond logo" class="logo-img">
+      <div class="logo">
+        Belle &amp; Beyond<span>BEAUTY</span>
+      </div>
+    </a>
+    
+    <nav class="primary-nav" id="primaryNav">
+      <div class="nav-item" data-slide="0"><a href="landing.html">Home</a></div>
+      <div class="nav-item" data-slide="1" data-category="skincare">
+        <a href="skincare.html">Skincare</a>
+        <div class="dropdown">
+          <a href="skincare.html">Cleansers</a>
+          <a href="skincare.html">Serums</a>
+          <a href="skincare.html">Moisturizers</a>
+          <a href="skincare.html">Sunscreen</a>
+          <a href="skincare.html">Face Masks</a>
+          <a href="skincare.html">Eye Care</a>
+        </div>
+      </div>
+      <div class="nav-item" data-slide="2" data-category="makeup">
+        <a href="makeup.html">Makeup</a>
+        <div class="dropdown">
+          <a href="makeup.html">Foundation</a>
+          <a href="makeup.html">Lip Colour</a>
+          <a href="makeup.html">Mascara &amp; Brows</a>
+          <a href="makeup.html">Blush &amp; Bronzer</a>
+        </div>
+      </div>
+      <div class="nav-item" data-slide="3" data-category="haircare">
+        <a href="haircare.html">Haircare</a>
+        <div class="dropdown">
+          <a href="haircare.html">Shampoo</a>
+          <a href="haircare.html">Conditioner</a>
+          <a href="haircare.html">Hair Oils</a>
+          <a href="haircare.html">Styling</a>
+        </div>
+      </div>
+    </nav>
+    
+    <button class="cart-btn" id="cartBtn">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
 </header>
 
 
@@ -112,7 +90,7 @@
     </section>
 
 
-    <section class="shop-section">
+    <section class="shop-section" id="shop">
 
         <div class="shop-heading">
             <div>
@@ -133,15 +111,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=85&w=1000&auto=format&fit=crop"
-                            alt="Velvet Matte Lipstick"
+                            src="https://static-01.daraz.pk/p/72542aa6873c0482b77c99cfab499521.jpg"
+                            alt="Peptide lip tints"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1625093525885-282384697917?q=85&w=1000&auto=format&fit=crop"
-                            alt="Velvet Matte Lipstick texture and application"
+                            src="https://sahacosmetics.pk/cdn/shop/files/Rhode_lip_tints_4_2690c06f-144a-4f80-b4ba-235268c8fce6.jpg?v=1765184954&width=1200"
+                            alt="Peptide lip tints"
                             loading="lazy"
                         >
                     </div>
@@ -152,7 +130,7 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Velvet Matte Lipstick</h3>
+                        <h3>Peptide lip tints</h3>
                         <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
@@ -176,14 +154,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWq9UnF25WjUZquyAM59OqRLCnuJ8Dx69XLtdEXRpe-X4z_aFf38EukRO6&s=10"
                             alt="Luminous Liquid Foundation"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1631214540242-3cd8c4b0b3b4?q=85&w=1000&auto=format&fit=crop"
+                            src="https://crowcrowcrow.com/_next/image?url=https%3A%2F%2Fimages.crowcrowcrow.com%2FB01MUF0D2B-6.webp&w=640&q=75"
                             alt="Luminous Liquid Foundation application"
                             loading="lazy"
                         >
@@ -218,14 +196,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1631214524020-7e18db9b5a2e?q=85&w=1000&auto=format&fit=crop"
+                            src="https://www.caretobeauty.com/media/catalog/product/m/a/maybelline-lash-sensational-sky-high-waterproof-mascara-01-very-black-6ml.jpg"
                             alt="Waterproof Mascara"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=85&w=1000&auto=format&fit=crop"
+                            src="https://img.ltwebstatic.com/v4/p/liteapp/2026/07/09/2a/178358790882ea8b47a353a9568fbf09b7bcd2053d_thumbnail_750x999.jpg"
                             alt="Waterproof Mascara application"
                             loading="lazy"
                         >
@@ -261,14 +239,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=85&w=1000&auto=format&fit=crop"
+                            src="https://glamit.pk/wp-content/uploads/2026/08/1003237286.jpg"
                             alt="Silk Blush and Bronzer"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512207846876-bb54ef5055e2?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nVE7ATVlDV_0LuYW5NLMHnG6X48kUJYFqnSI9BSyrPQoJPJu02mVJCo&s=10"
                             alt="Silk Blush and Bronzer shades"
                             loading="lazy"
                         >
@@ -303,14 +281,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1512207846876-bb54ef5055e2?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-tHRH-K0WdXRW1VkHG3baBNS2nhutqNnKubreeP40hA&s=10"
                             alt="Eyeshadow Palette"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLpYK7Sl82rh_tkUBU2muJkY41lDC1EWktJgHUKJTJuQ&s"
                             alt="Eyeshadow palette shades"
                             loading="lazy"
                         >
@@ -346,14 +324,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrTnwti0NHVK_2VZlSYsMgkiERN8IC2nqV-MSm5AzkIA&s=10"
                             alt="Lip Glow Oil"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGUb-P99UZB3LY5lg0362XdNu6RagUqrknn7bQcDIqnj0bwR2VoTpcep4&s=10"
                             alt="Lip Glow Oil texture"
                             loading="lazy"
                         >
@@ -389,14 +367,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=85&w=1000&auto=format&fit=crop"
+                            src="https://dubuypk.com/cdn/shop/files/elf-hydrating-camo-concealer-fair-warm-fair-beige-light-ivory-light-sand-light-beige-medium-peach-medium-sand-medium-beige-medium-neutral-tan-sand-0_1024x1024.jpg?v=1749728105"
                             alt="Hydrating Concealer"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=85&w=1000&auto=format&fit=crop"
+                            src="https://www.colorshow.pk/cdn/shop/products/ELF-84827b.jpg?v=1755684897"
                             alt="Hydrating Concealer application"
                             loading="lazy"
                         >
@@ -431,14 +409,14 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=85&w=1000&auto=format&fit=crop"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GJScUM9i9xMwAE9Rz6WHntekqZ-kXaf6Wp_nH8C_vDzKHBX-Vt4bAnXY&s=10"
                             alt="Highlighting Powder"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=85&w=1000&auto=format&fit=crop"
+                            src="https://thevault.pk/cdn/shop/files/WhatsApp-Image-2023-05-24-at-12.53.44_1200x1200.jpg?v=1689284419"
                             alt="Highlighting Powder swatch"
                             loading="lazy"
                         >
@@ -470,7 +448,7 @@
     </section>
 
 
-    <section class="beauty-note" id="skincare">
+    <section class="beauty-note">
         <div class="note-number">01</div>
 
         <div class="note-content">
@@ -486,23 +464,23 @@
     </section>
 
 
-    <section class="category-preview" id="haircare">
+    <section class="category-preview">
         <div class="category-card">
             <span>01</span>
             <h3>Skincare</h3>
-            <a href="#">Explore collection →</a>
+            <a href="skincare.html">Explore collection →</a>
         </div>
 
         <div class="category-card featured">
             <span>02</span>
             <h3>Makeup</h3>
-            <a href="#makeup">Shop makeup →</a>
+            <a href="#shop">Shop makeup →</a>
         </div>
 
         <div class="category-card">
             <span>03</span>
             <h3>Haircare</h3>
-            <a href="#">Explore collection →</a>
+            <a href="haircare.html">Explore collection →</a>
         </div>
     </section>
 
@@ -521,9 +499,9 @@
 
         <div class="footer-column">
             <h4>Shop</h4>
-            <a href="#skincare">Skincare</a>
-            <a href="#makeup">Makeup</a>
-            <a href="#haircare">Haircare</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="#shop">Makeup</a>
+            <a href="haircare.html">Haircare</a>
         </div>
 
         <div class="footer-column">
@@ -549,5 +527,19 @@
 
 </footer>
 
+<div class="cart-overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-drawer-items" id="cartItems"></div>
+  <div class="cart-drawer-footer">
+    <div class="cart-drawer-total"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <button class="cart-checkout-btn" type="button">Checkout</button>
+  </div>
+</aside>
+
+<script src="cart.js"></script>
 </body>
 </html>

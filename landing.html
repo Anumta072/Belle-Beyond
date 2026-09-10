@@ -7,12 +7,54 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="cart.css">
+<style>
+  /* Custom section layout so CSS/JS slider doesn't hide these blocks */
+  .category-feature-block {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 60px !important;
+    gap: 40px !important;
+    width: 100% !important;
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .category-feature-block.reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .category-feature-block .feature-copy {
+    flex: 1 !important;
+  }
+
+  .category-feature-block .feature-visual {
+    flex: 1 !important;
+  }
+
+  .category-feature-block .feature-visual img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 450px !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 8px !important;
+  }
+
+  @media (max-width: 768px) {
+    .category-feature-block, .category-feature-block.reverse {
+      flex-direction: column !important;
+    }
+  }
+</style>
 </head>
 <body>
- 
+
 <header id="mainHeader">
   <div class="header-inner">
-    <a href="#home" class="brand">
+    <a href="landing.html" class="brand">
       <img src="logo.png" alt="Belle & Beyond logo" class="logo-img">
       <div class="logo">
         Belle &amp; Beyond<span>BEAUTY</span>
@@ -20,8 +62,8 @@
     </a>
     
     <nav class="primary-nav" id="primaryNav">
-      <div class="nav-item" data-slide="0"><a href="#home">Home</a></div>
-      <div class="nav-item" data-slide="1" data-category="skincare">
+      <div class="nav-item"><a href="landing.html">Home</a></div>
+      <div class="nav-item" data-category="skincare">
         <a href="skincare.html">Skincare</a>
         <div class="dropdown">
           <a href="skincare.html">Cleansers</a>
@@ -32,7 +74,7 @@
           <a href="skincare.html">Eye Care</a>
         </div>
       </div>
-      <div class="nav-item" data-slide="2" data-category="makeup">
+      <div class="nav-item" data-category="makeup">
         <a href="makeup.html">Makeup</a>
         <div class="dropdown">
           <a href="#shop">Foundation</a>
@@ -41,13 +83,13 @@
           <a href="#shop">Blush &amp; Bronzer</a>
         </div>
       </div>
-      <div class="nav-item" data-slide="3" data-category="haircare">
-        <a href="#shop">Haircare</a>
+      <div class="nav-item" data-category="haircare">
+        <a href="haircare.html">Haircare</a>
         <div class="dropdown">
-          <a href="#shop">Shampoo</a>
-          <a href="#shop">Conditioner</a>
-          <a href="#shop">Hair Oils</a>
-          <a href="#shop">Styling</a>
+          <a href="haircare.html">Shampoo</a>
+          <a href="haircare.html">Conditioner</a>
+          <a href="haircare.html">Hair Oils</a>
+          <a href="haircare.html">Styling</a>
         </div>
       </div>
     </nav>
@@ -57,86 +99,73 @@
     </button>
   </div>
 </header>
- 
-<section class="hero" id="home">
-  <div class="hero-track" id="heroTrack">
- 
-    <div class="hero-slide is-active" data-slide="0">
-      <div class="hero-copy">
-        <h1>Beauty, without the noise.</h1>
-        <p>One home for skincare, makeup and haircare — made to work quietly, not shout for attention.</p>
-        <a href="#shop" class="hero-cta">Explore Belle &amp; Beyond</a>
-      </div>
-      <div class="hero-visual" style="--tint:#E7C3B6;">
-        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop" alt="Belle and Beyond product edit">
-      </div>
-    </div>
- 
-    <div class="hero-slide" data-slide="1">
-      <div class="hero-copy">
-        <h1>Skincare that lets your skin lead.</h1>
-        <p>Small-batch formulas made with rosehip, vitamin C and botanical actives — chosen for what your skin actually needs, not what's trending.</p>
-        <a href="#shop" class="hero-cta">Shop Skincare</a>
-      </div>
-      <div class="hero-visual" style="--tint:#DCE3D2;">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop" alt="Rosehip glow serum bottle">
-      </div>
-    </div>
- 
-    <div class="hero-slide" data-slide="2">
-      <div class="hero-copy">
-        <h1>Makeup that still lets skin breathe.</h1>
-        <p>Buildable, skin-first colour with clean pigments — made to enhance your face, not cover it up.</p>
-        <a href="#shop" class="hero-cta">Shop Makeup</a>
-      </div>
-      <div class="hero-visual" style="--tint:#EAD6C4;">
-        <img src="https://images.unsplash.com/photo-1631214540242-3cd8c4b0b3b4?q=80&w=800&auto=format&fit=crop" alt="Makeup edit flatlay">
-      </div>
-    </div>
- 
-    <div class="hero-slide" data-slide="3">
-      <div class="hero-copy">
-        <h1>Haircare, rooted in what works.</h1>
-        <p>Sulfate-free formulas with real actives — for hair that looks after itself between washes.</p>
-        <a href="#shop" class="hero-cta">Shop Haircare</a>
-      </div>
-      <div class="hero-visual" style="--tint:#D8D2C2;">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop" alt="Haircare bottle">
-      </div>
-    </div>
- 
-  </div>
- 
-  <button class="hero-arrow prev" id="heroPrev" aria-label="Previous slide">&#8249;</button>
-  <button class="hero-arrow next" id="heroNext" aria-label="Next slide">&#8250;</button>
- 
-  <div class="hero-dots" id="heroDots">
-    <button class="dot is-active" data-slide="0" aria-label="Home"></button>
-    <button class="dot" data-slide="1" aria-label="Skincare"></button>
-    <button class="dot" data-slide="2" aria-label="Makeup"></button>
-    <button class="dot" data-slide="3" aria-label="Haircare"></button>
+
+<!-- Main Banner / Intro Section -->
+<section class="hero-static" id="home" style="display: flex; align-items: center; padding: 60px 5%; background: #FAF7F5; text-align: center; justify-content: center;">
+  <div class="hero-copy" style="max-width: 800px; margin: 0 auto;">
+    <h1>Beauty, without the noise.</h1>
+    <p>One home for skincare, makeup and haircare — made to work quietly, not shout for attention. We focus on mindful formulations, effective natural ingredients, and effortless beauty routines that enhance your natural glow.</p>
+    <a href="#categories" class="hero-cta">Explore Our Categories</a>
   </div>
 </section>
- 
-<div class="category-strip">
-  <div class="wrap" id="categoryStrip"></div>
-</div>
- 
-<div class="section-head" id="shop">
-  <h2>Best sellers</h2>
-  <p id="productCount">8 of 8 products</p>
-</div>
- 
-<div class="product-grid" id="productGrid">
-  <!-- product cards injected by JS -->
-</div>
- 
+
+<!-- Page Detail Section (About Belle & Beyond) -->
+<section class="about-detail" style="padding: 60px 5%; background: #FFFFFF; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-family: 'Fraunces', serif; font-size: 2.2rem; margin-bottom: 15px;">Pure, Intentional &amp; Thoughtful Beauty</h2>
+    <p style="font-family: 'Work Sans', sans-serif; font-size: 1rem; color: #555; line-height: 1.7;">
+      At Belle &amp; Beyond, we believe that self-care should be uncomplicated. Our curated collections bring together dermatologically thoughtful skincare, skin-first breathable makeup, and scalp-nourishing haircare. Every product is crafted with safe, high-performing ingredients that work in harmony with your body.
+    </p>
+  </div>
+</section>
+
+<!-- 3 Main Categories Sections (Alternating Pictures Left/Right) -->
+<section id="categories" class="featured-sections" style="padding: 40px 5%; max-width: 1200px; margin: 0 auto;">
+
+  <!-- 1. Skincare (Picture Right) -->
+  <div class="category-feature-block">
+    <div class="feature-copy hero-copy">
+      <h1>Skincare that lets your skin lead.</h1>
+      <p>Small-batch formulas made with rosehip, vitamin C and botanical actives — chosen for what your skin actually needs, not what's trending.</p>
+      <a href="skincare.html" class="hero-cta">Shop Skincare</a>
+    </div>
+    <div class="feature-visual">
+      <img src="https://www.rhodeskin.com/cdn/shop/files/travel-set-hero1-desktop_1440x.jpg?v=1783480156" alt="Skincare Collection">
+    </div>
+  </div>
+
+  <!-- 2. Makeup (Picture Left - Alternating) -->
+  <div class="category-feature-block reverse">
+    <div class="feature-copy hero-copy">
+      <h1>Makeup that still lets skin breathe.</h1>
+      <p>Buildable, skin-first colour with clean pigments — made to enhance your face, not cover it up.</p>
+      <a href="makeup.html" class="hero-cta">Shop Makeup</a>
+    </div>
+    <div class="feature-visual">
+      <img src="https://www.rhodeskin.com/cdn/shop/files/tint-bundle-hero-desktop_1440x.jpg?v=1772559937" alt="Makeup Collection">
+    </div>
+  </div>
+
+  <!-- 3. Haircare (Picture Right) -->
+  <div class="category-feature-block">
+    <div class="feature-copy hero-copy">
+      <h1>Haircare, rooted in what works.</h1>
+      <p>Sulfate-free formulas with real actives — for hair that looks after itself between washes.</p>
+      <a href="#shop" class="hero-cta">Shop Haircare</a>
+    </div>
+    <div class="feature-visual">
+      <img src="https://i.pinimg.com/736x/a9/c4/57/a9c457a50cd0468eb7fe30ce5461d9a6.jpg" alt="Haircare Collection">
+    </div>
+  </div>
+
+</section>
+
 <section class="routine-band">
   <h2>Find your perfect routine</h2>
   <p>Answer three quick questions and we'll match you with the products your skin, face and hair will actually thank you for.</p>
   <a href="#">Shop by Skin Type</a>
 </section>
- 
+
 <footer>
   <div class="footer-inner">
     <div>
@@ -151,20 +180,20 @@
     </div>
   </div>
 </footer>
- 
-<div class="overlay" id="overlay"></div>
+
+<div class="cart-overlay" id="overlay"></div>
 <aside class="cart-drawer" id="cartDrawer">
-  <div class="cart-head">
+  <div class="cart-drawer-head">
     <h3>Your Cart</h3>
-    <button class="cart-close" id="cartClose">&times;</button>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
   </div>
-  <div class="cart-items" id="cartItems"></div>
-  <div class="cart-footer">
-    <div class="cart-total"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
-    <button class="checkout-btn">Checkout</button>
+  <div class="cart-drawer-items" id="cartItems"></div>
+  <div class="cart-drawer-footer">
+    <div class="cart-drawer-total"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <button class="cart-checkout-btn" type="button">Checkout</button>
   </div>
 </aside>
- 
-<script src="script.js"></script>
+
+<script src="cart.js"></script>
 </body>
 </html>

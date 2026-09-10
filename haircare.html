@@ -4,104 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Makeup Collection — Belle &amp; Beyond</title>
+    <title>Haircare Collection — Belle &amp; Beyond</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
 
-<header class="site-header">
-    <div class="header-inner">
-
-        <a href="#home" class="brand">
-            <span class="brand-mark">B&amp;B</span>
-            <span class="brand-name">
-                Belle &amp; Beyond
-                <small>BEAUTY</small>
-            </span>
-        </a>
-
-        <nav class="main-nav" aria-label="Main navigation">
-
-            <div class="nav-item">
-                <a href="#home">Home</a>
-            </div>
-
-            <div class="nav-item has-dropdown">
-                <a href="#skincare">
-                    Skincare
-                    <span class="chevron">⌄</span>
-                </a>
-
-                <div class="dropdown">
-                    <a href="#skincare">Cleansers</a>
-                    <a href="#skincare">Serums</a>
-                    <a href="#skincare">Moisturizers</a>
-                    <a href="#skincare">Sunscreen</a>
-                    <a href="#skincare">Face Masks</a>
-                </div>
-            </div>
-
-            <div class="nav-item has-dropdown active">
-                <a href="#makeup">
-                    Makeup
-                    <span class="chevron">⌄</span>
-                </a>
-
-                <div class="dropdown">
-                    <a href="#makeup">Foundation</a>
-                    <a href="#makeup">Lip Colour</a>
-                    <a href="#makeup">Eyes</a>
-                    <a href="#makeup">Blush &amp; Bronzer</a>
-                    <a href="#makeup">Highlighter</a>
-                </div>
-            </div>
-
-            <div class="nav-item has-dropdown">
-                <a href="#haircare">
-                    Haircare
-                    <span class="chevron">⌄</span>
-                </a>
-
-                <div class="dropdown">
-                    <a href="#haircare">Shampoo</a>
-                    <a href="#haircare">Conditioner</a>
-                    <a href="#haircare">Hair Oils</a>
-                    <a href="#haircare">Styling</a>
-                </div>
-            </div>
-
-        </nav>
-
-        <button class="cart-button" type="button" aria-label="Shopping cart">
-            <span>Cart</span>
-            <span class="cart-count">0</span>
-        </button>
-
-    </div>
+<header id="mainHeader">
+  <div class="header-inner">
+    <a href="landing.html" class="brand">
+      <img src="logo.png" alt="Belle & Beyond logo" class="logo-img">
+      <div class="logo">
+        Belle &amp; Beyond<span>BEAUTY</span>
+      </div>
+    </a>
+    
+    <nav class="primary-nav" id="primaryNav">
+      <div class="nav-item" data-slide="0"><a href="landing.html">Home</a></div>
+      <div class="nav-item" data-slide="1" data-category="skincare">
+        <a href="skincare.html">Skincare</a>
+        <div class="dropdown">
+          <a href="skincare.html">Cleansers</a>
+          <a href="skincare.html">Serums</a>
+          <a href="skincare.html">Moisturizers</a>
+          <a href="skincare.html">Sunscreen</a>
+          <a href="skincare.html">Face Masks</a>
+          <a href="skincare.html">Eye Care</a>
+        </div>
+      </div>
+      <div class="nav-item" data-slide="2" data-category="makeup">
+        <a href="makeup.html">Makeup</a>
+        <div class="dropdown">
+          <a href="makeup.html">Foundation</a>
+          <a href="makeup.html">Lip Colour</a>
+          <a href="makeup.html">Mascara &amp; Brows</a>
+          <a href="makeup.html">Blush &amp; Bronzer</a>
+        </div>
+      </div>
+      <div class="nav-item" data-slide="3" data-category="haircare">
+        <a href="haircare.html">Haircare</a>
+        <div class="dropdown">
+          <a href="haircare.html">Shampoo</a>
+          <a href="haircare.html">Conditioner</a>
+          <a href="haircare.html">Hair Oils</a>
+          <a href="haircare.html">Styling</a>
+        </div>
+      </div>
+    </nav>
+    
+    <button class="cart-btn" id="cartBtn">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
 </header>
 
 
 <main id="home">
 
-    <section class="collection-banner" id="makeup">
+    <section class="collection-banner" id="haircare">
         <div class="banner-content">
-            <span class="eyebrow">BELLE &amp; BEYOND / MAKEUP</span>
+            <span class="eyebrow">BELLE &amp; BEYOND / HAIRCARE</span>
 
             <h1>
-                Makeup Collection
-                <span>Clean, skin-first cosmetics to enhance your natural beauty</span>
+                Haircare Collection
+                <span>Nourishing, scalp-first formulas to restore your hair's natural vitality</span>
             </h1>
 
             <p>
-                Thoughtfully crafted colour, effortless textures and
-                luminous finishes designed to let your skin remain part
-                of the look.
+                Thoughtfully crafted botanicals, lightweight hydration and
+                restorative finishes designed to let your hair thrive
+                from root to tip.
             </p>
         </div>
 
@@ -116,8 +94,8 @@
 
         <div class="shop-heading">
             <div>
-                <span class="section-label">THE MAKEUP EDIT</span>
-                <h2>Everyday beauty, elevated.</h2>
+                <span class="section-label">THE HAIRCARE EDIT</span>
+                <h2>Everyday ritual, elevated.</h2>
             </div>
 
             <p class="product-total">8 products</p>
@@ -133,15 +111,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=85&w=1000&auto=format&fit=crop"
-                            alt="Velvet Matte Lipstick"
+                            src="https://enemmall.com/cdn/shop/files/3312669.jpg?v=1757331037"
+                            alt="Nourishing Botanical Shampoo"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1625093525885-282384697917?q=85&w=1000&auto=format&fit=crop"
-                            alt="Velvet Matte Lipstick texture and application"
+                            src="https://discountstore.pk/cdn/shop/files/416Wt8sgSJL.jpg?v=1752559393"
+                            alt="Nourishing Botanical Shampoo texture and application"
                             loading="lazy"
                         >
                     </div>
@@ -152,16 +130,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Velvet Matte Lipstick</h3>
+                        <h3>Nourishing Shampoo</h3>
                         <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
                     <p>
-                        Creamy, weightless colour with a soft-focus matte finish.
+                        Gentle, sulfate-free lather that purifies without stripping moisture.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$28.00</span>
+                        <span class="price">$32.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -176,15 +154,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=85&w=1000&auto=format&fit=crop"
-                            alt="Luminous Liquid Foundation"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnYEHJZUsQxvvyJq8Eyi9KqAFqI9cUHEk-BcuNCilCYg&s=10"
+                            alt="Hydrating Velvet Conditioner"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1631214540242-3cd8c4b0b3b4?q=85&w=1000&auto=format&fit=crop"
-                            alt="Luminous Liquid Foundation application"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZIh_3rpEUa_PsigQExE64iSQNpb69t8EnXbwaW-DKA&s=10"
+                            alt="Hydrating Velvet Conditioner application"
                             loading="lazy"
                         >
                     </div>
@@ -194,16 +172,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Luminous Liquid Foundation</h3>
+                        <h3>Hydrating Conditioner</h3>
                         <span class="rating">★★★★★ <small>4.8</small></span>
                     </div>
 
                     <p>
-                        Buildable coverage with a natural, radiant skin-like finish.
+                        Deeply softening treatment for silky, weightless shine and tangle-free hair.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$42.00</span>
+                        <span class="price">$34.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -218,15 +196,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1631214524020-7e18db9b5a2e?q=85&w=1000&auto=format&fit=crop"
-                            alt="Waterproof Mascara"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf3nOwntBRZrpURKX6vnlPm2AbcGxxkrDl6-YylldmU-lX6yl3XTJ6qYM&s=10"
+                            alt="Restorative Scalp Serum"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=85&w=1000&auto=format&fit=crop"
-                            alt="Waterproof Mascara application"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9MW0ejXmaxr1gvN0GlG6EvaBG0I9cyCt05lLtRLTe0n94WSLmT52SKGAn&s=10"
+                            alt="Restorative Scalp Serum application"
                             loading="lazy"
                         >
                     </div>
@@ -237,16 +215,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Waterproof Mascara</h3>
+                        <h3>Restorative Scalp Serum</h3>
                         <span class="rating">★★★★★ <small>4.7</small></span>
                     </div>
 
                     <p>
-                        Lengthening, defining pigment that stays beautifully in place.
+                        Soothing leave-in elixir that balances scalp moisture and fosters hair health.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$24.00</span>
+                        <span class="price">$42.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -261,15 +239,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=85&w=1000&auto=format&fit=crop"
-                            alt="Silk Blush and Bronzer"
+                            src="https://www.oohganics.com.au/cdn/shop/files/Mylk-and-Butter-Co_-Luminous-Hair-Oil_jpg.jpg?v=1768955278&width=2048"
+                            alt="Luminous Hair Elixir Oil"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512207846876-bb54ef5055e2?q=85&w=1000&auto=format&fit=crop"
-                            alt="Silk Blush and Bronzer shades"
+                            src="https://mylkandbutter.co/cdn/shop/files/Luminous_Hair_Oil_Ingredients_shot.png?v=1762488380&width=2048"
+                            alt="Luminous Hair Elixir Oil drops"
                             loading="lazy"
                         >
                     </div>
@@ -279,16 +257,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Silk Blush &amp; Bronzer</h3>
+                        <h3>Luminous Hair Elixir Oil</h3>
                         <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
                     <p>
-                        Silky pressed powders for a naturally sculpted, healthy glow.
+                        Lightweight cold-pressed botanical oil blend for radiant gloss and anti-frizz control.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$36.00</span>
+                        <span class="price">$38.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -303,15 +281,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1512207846876-bb54ef5055e2?q=85&w=1000&auto=format&fit=crop"
-                            alt="Eyeshadow Palette"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0VSdoaxRYq8_MPpOmBhE7E8Bu15_KU4skfB5sIuq0TQ&s=10"
+                            alt="Deep Repair Masque"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=85&w=1000&auto=format&fit=crop"
-                            alt="Eyeshadow palette shades"
+                            src="https://eezepc.com/wp-content/uploads/2026/03/Dyson-HS09-Airwrap-Multi-Styler-Straightener-Ceramic-Pink-price-in-pakistan-eezepc-1-large.webp"
+                            alt="Deep Repair Masque texture"
                             loading="lazy"
                         >
                     </div>
@@ -322,16 +300,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Eyeshadow Palette</h3>
+                        <h3>Deep Repair Masque</h3>
                         <span class="rating">★★★★★ <small>4.8</small></span>
                     </div>
 
                     <p>
-                        Twelve versatile neutrals with buttery, blendable colour payoff.
+                        Intensive weekly treatment to restore dry, damaged strands and boost elasticity.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$48.00</span>
+                        <span class="price">$46.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -346,15 +324,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=85&w=1000&auto=format&fit=crop"
-                            alt="Lip Glow Oil"
+                            src="https://static-01.daraz.pk/p/6af9ef5abfe5c6285a8947d9ca327959.png"
+                            alt="Thermal Defense Styling Mist"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=85&w=1000&auto=format&fit=crop"
-                            alt="Lip Glow Oil texture"
+                            src="https://thehairpantry.com/cdn/shop/files/1_180b1086-27bf-4e7c-991a-edcd4d22871e.png?v=1787135054"
+                            alt="Thermal Defense Styling Mist texture"
                             loading="lazy"
                         >
                     </div>
@@ -365,16 +343,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Lip Glow Oil</h3>
+                        <h3>Thermal Defense Styling Mist</h3>
                         <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
                     <p>
-                        Nourishing glossy colour with a cushion-soft, hydrated feel.
+                        Nourishing heat protectant spray shielding locks up to 450°F with sleek hold.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$26.00</span>
+                        <span class="price">$28.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -389,15 +367,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=85&w=1000&auto=format&fit=crop"
-                            alt="Hydrating Concealer"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv9m_bFhW6r0mKMZUKYsNQaNfuUcW_3Vz75jwsFlerhX_24mJnFI-65A0&s=10"
+                            alt="Clarifying Scalp Scrub"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=85&w=1000&auto=format&fit=crop"
-                            alt="Hydrating Concealer application"
+                            src="https://beautyandbrands.pk/cdn/shop/products/TeaTreePurifying_BalancingHair_ScalpScrub240ml2.jpg?v=1657360620&width=1946"
+                            alt="Clarifying Scalp Scrub application"
                             loading="lazy"
                         >
                     </div>
@@ -407,16 +385,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Hydrating Concealer</h3>
+                        <h3>Clarifying Scalp Scrub</h3>
                         <span class="rating">★★★★★ <small>4.8</small></span>
                     </div>
 
                     <p>
-                        Flexible medium coverage that smooths and brightens without dryness.
+                        Exfoliating detox treatment removing buildup and refreshing roots effortlessly.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$30.00</span>
+                        <span class="price">$36.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -431,15 +409,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=85&w=1000&auto=format&fit=crop"
-                            alt="Highlighting Powder"
+                            src="https://theouai.com/cdn/shop/files/Ghost_Bundle_LIC_Trio_Site_Asset_PDP_Product_Thumbnail_Hover.jpg?crop=center&height=1871&v=1782863276&width=1440"
+                            alt="Volumizing Styling Mousse"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=85&w=1000&auto=format&fit=crop"
-                            alt="Highlighting Powder swatch"
+                            src="https://theouai.com/cdn/shop/files/LIC_Repack_Site_Asset_PDP_North_Bondi_Product_Thumbnail_Hover_Travel.jpg?crop=center&height=1871&v=1782248053&width=1440"
+                            alt="Volumizing Styling Mousse texture"
                             loading="lazy"
                         >
                     </div>
@@ -449,16 +427,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Highlighting Powder</h3>
+                        <h3>Leave-in Conditioner</h3>
                         <span class="rating">★★★★★ <small>4.7</small></span>
                     </div>
 
                     <p>
-                        Finely milled luminosity that catches the light without glitter.
+                        Featherlight foam adding lift, full-bodied bounce and long-lasting touchable hold.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$32.00</span>
+                        <span class="price">$30.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -475,11 +453,11 @@
 
         <div class="note-content">
             <span class="section-label">THE BELLE PHILOSOPHY</span>
-            <h2>Makeup should complement your skin, not hide it.</h2>
+            <h2>Haircare should nourish your hair, not burden it.</h2>
         </div>
 
         <p>
-            Clean formulas, comfortable textures and considered colour
+            Clean formulas, comfortable textures and considered nourishment
             designed for everyday rituals. Beauty that feels as good
             as it looks.
         </p>
@@ -495,13 +473,13 @@
 
         <div class="category-card featured">
             <span>02</span>
-            <h3>Makeup</h3>
-            <a href="#makeup">Shop makeup →</a>
+            <h3>Haircare</h3>
+            <a href="#haircare">Shop haircare →</a>
         </div>
 
         <div class="category-card">
             <span>03</span>
-            <h3>Haircare</h3>
+            <h3>Bodycare</h3>
             <a href="#">Explore collection →</a>
         </div>
     </section>
@@ -522,8 +500,8 @@
         <div class="footer-column">
             <h4>Shop</h4>
             <a href="#skincare">Skincare</a>
-            <a href="#makeup">Makeup</a>
             <a href="#haircare">Haircare</a>
+            <a href="#haircare">Bodycare</a>
         </div>
 
         <div class="footer-column">
@@ -548,6 +526,18 @@
     </div>
 
 </footer>
-
+<div class="cart-overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-drawer-items" id="cartItems"></div>
+  <div class="cart-drawer-footer">
+    <div class="cart-drawer-total"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <button class="cart-checkout-btn" type="button">Checkout</button>
+  </div>
+</aside>
+<script src="cart.js"></script>
 </body>
 </html>

@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Makeup Collection — Belle &amp; Beyond</title>
+    <title>Skincare Collection — Belle &amp; Beyond</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
 
 <header id="mainHeader">
   <div class="header-inner">
-    <a href="#home" class="brand">
+    <a href="landing.html" class="brand">
       <img src="logo.png" alt="Belle & Beyond logo" class="logo-img">
       <div class="logo">
         Belle &amp; Beyond<span>BEAUTY</span>
@@ -26,7 +26,7 @@
     </a>
     
     <nav class="primary-nav" id="primaryNav">
-      <div class="nav-item" data-slide="0"><a href="#home">Home</a></div>
+      <div class="nav-item" data-slide="0"><a href="landing.html">Home</a></div>
       <div class="nav-item" data-slide="1" data-category="skincare">
         <a href="skincare.html">Skincare</a>
         <div class="dropdown">
@@ -41,19 +41,19 @@
       <div class="nav-item" data-slide="2" data-category="makeup">
         <a href="makeup.html">Makeup</a>
         <div class="dropdown">
-          <a href="#shop">Foundation</a>
-          <a href="#shop">Lip Colour</a>
-          <a href="#shop">Mascara &amp; Brows</a>
-          <a href="#shop">Blush &amp; Bronzer</a>
+          <a href="makeup.html">Foundation</a>
+          <a href="makeup.html">Lip Colour</a>
+          <a href="makeup.html">Mascara &amp; Brows</a>
+          <a href="makeup.html">Blush &amp; Bronzer</a>
         </div>
       </div>
       <div class="nav-item" data-slide="3" data-category="haircare">
-        <a href="#shop">Haircare</a>
+        <a href="haircare.html">Haircare</a>
         <div class="dropdown">
-          <a href="#shop">Shampoo</a>
-          <a href="#shop">Conditioner</a>
-          <a href="#shop">Hair Oils</a>
-          <a href="#shop">Styling</a>
+          <a href="haircare.html">Shampoo</a>
+          <a href="haircare.html">Conditioner</a>
+          <a href="haircare.html">Hair Oils</a>
+          <a href="haircare.html">Styling</a>
         </div>
       </div>
     </nav>
@@ -66,35 +66,34 @@
 
 <main id="home">
 
-    <section class="collection-banner" id="makeup">
+    <section class="collection-banner" id="skincare">
         <div class="banner-content">
-            <span class="eyebrow">BELLE &amp; BEYOND / MAKEUP</span>
+            <span class="eyebrow">BELLE &amp; BEYOND / SKINCARE</span>
 
             <h1>
-                Makeup Collection
-                <span>Clean, skin-first cosmetics to enhance your natural beauty</span>
+                Skincare Collection
+                <span>Nourishing, clinical formulations for radiant skin health</span>
             </h1>
 
             <p>
-                Thoughtfully crafted colour, effortless textures and
-                luminous finishes designed to let your skin remain part
-                of the look.
+                Potent botanical extracts, active hydration, and gentle barrier-repairing 
+                actives designed to restore balance, resilience, and natural luminosity.
             </p>
         </div>
 
         <div class="banner-detail">
             <span>08</span>
-            <small>EDITED<br>ESSENTIALS</small>
+            <small>ESSENTIAL<br>FORMULAS</small>
         </div>
     </section>
 
 
-    <section class="shop-section">
+    <section class="shop-section" id="shop">
 
         <div class="shop-heading">
             <div>
-                <span class="section-label">THE MAKEUP EDIT</span>
-                <h2>Everyday beauty, elevated.</h2>
+                <span class="section-label">THE SKINCARE EDIT</span>
+                <h2>Clean science, effortless care.</h2>
             </div>
 
             <p class="product-total">8 products</p>
@@ -110,15 +109,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=85&w=1000&auto=format&fit=crop"
-                            alt="Velvet Matte Lipstick"
+                            src="https://www.rhodeskin.com/cdn/shop/files/BB-FAQ_d1dad520-96a9-4bf9-b77d-2f623e2f3ead_1440x.jpg?v=1749078015"
+                            alt="Hydrating Gel Cleanser"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1625093525885-282384697917?q=85&w=1000&auto=format&fit=crop"
-                            alt="Velvet Matte Lipstick texture and application"
+                            src="https://www.rhodeskin.com/cdn/shop/files/BB-application-1_1548ec6f-d3bd-4880-afb8-8ad10df2a8bc_1440x.jpg?v=1749077183"
+                            alt="Hydrating Gel Cleanser texture"
                             loading="lazy"
                         >
                     </div>
@@ -129,16 +128,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Velvet Matte Lipstick</h3>
+                        <h3>Moisturiser</h3>
                         <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
                     <p>
-                        Creamy, weightless colour with a soft-focus matte finish.
+                        A non-stripping facial wash infused with hyaluronic acid and green tea.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$28.00</span>
+                        <span class="price">$32.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -153,34 +152,35 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=85&w=1000&auto=format&fit=crop"
-                            alt="Luminous Liquid Foundation"
+                            src="https://www.rhodeskin.com/cdn/shop/files/mist-app-1_1440x.jpg?v=1749170375"
+                            alt="Vitamin C Brightening Serum"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1631214540242-3cd8c4b0b3b4?q=85&w=1000&auto=format&fit=crop"
-                            alt="Luminous Liquid Foundation application"
+                            src="https://www.rhodeskin.com/cdn/shop/files/mist-ingredients_22583e79-e972-4611-93ee-1e6659e7a1ea_1440x.jpg?v=1748967541"
+                            alt="Vitamin C Brightening Serum drop"
                             loading="lazy"
                         >
                     </div>
 
+                    <span class="product-tag">EDITOR'S PICK</span>
                     <span class="quick-view">View Details</span>
                 </a>
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Luminous Liquid Foundation</h3>
-                        <span class="rating">★★★★★ <small>4.8</small></span>
+                        <h3>mist</h3>
+                        <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
                     <p>
-                        Buildable coverage with a natural, radiant skin-like finish.
+                        15% pure L-ascorbic acid with ferulic acid for maximum glow and antioxidant defense.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$42.00</span>
+                        <span class="price">$58.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -195,35 +195,34 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1631214524020-7e18db9b5a2e?q=85&w=1000&auto=format&fit=crop"
-                            alt="Waterproof Mascara"
+                            src="https://www.rhodeskin.com/cdn/shop/files/recycling-eye-prep-desktop_6dc66b00-61e4-4eb1-b6f2-04b7ed687e72_1440x.jpg?v=1759440411"
+                            alt="Barrier Repair Moisturizer"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=85&w=1000&auto=format&fit=crop"
-                            alt="Waterproof Mascara application"
+                            src="https://www.rhodeskin.com/cdn/shop/files/eye-prep-app-1_1440x.jpg?v=1759278296"
+                            alt="Barrier Repair Moisturizer cream texture"
                             loading="lazy"
                         >
                     </div>
 
-                    <span class="product-tag">NEW</span>
                     <span class="quick-view">View Details</span>
                 </a>
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Waterproof Mascara</h3>
-                        <span class="rating">★★★★★ <small>4.7</small></span>
+                        <h3>Eye patch</h3>
+                        <span class="rating">★★★★★ <small>4.8</small></span>
                     </div>
 
                     <p>
-                        Lengthening, defining pigment that stays beautifully in place.
+                        Rich, restorative cream engineered to repair fragile lipid barriers overnight.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$24.00</span>
+                        <span class="price">$46.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -238,34 +237,35 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=85&w=1000&auto=format&fit=crop"
-                            alt="Silk Blush and Bronzer"
+                            src="https://www.rhodeskin.com/cdn/shop/files/travel-set-hero1-desktop_1440x.jpg?v=1783480156"
+                            alt="Invisible Daily Mineral Sunscreen SPF 50"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512207846876-bb54ef5055e2?q=85&w=1000&auto=format&fit=crop"
-                            alt="Silk Blush and Bronzer shades"
+                            src="https://www.rhodeskin.com/cdn/shop/files/travel-set-featured_2b7378b0-2d9c-4b45-8c7f-ebfb181f9ba6_1440x.jpg?v=1783473558"
+                            alt="Sunscreen texture swatch"
                             loading="lazy"
                         >
                     </div>
 
+                    <span class="product-tag">NEW</span>
                     <span class="quick-view">View Details</span>
                 </a>
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Silk Blush &amp; Bronzer</h3>
-                        <span class="rating">★★★★★ <small>4.9</small></span>
+                        <h3>Travel set</h3>
+                        <span class="rating">★★★★★ <small>4.7</small></span>
                     </div>
 
                     <p>
-                        Silky pressed powders for a naturally sculpted, healthy glow.
+                        Weightless, zero-white-cast Broad Spectrum protection infused with squalane.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$36.00</span>
+                        <span class="price">$38.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -280,35 +280,34 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1512207846876-bb54ef5055e2?q=85&w=1000&auto=format&fit=crop"
-                            alt="Eyeshadow Palette"
+                            src="https://www.rhodeskin.com/cdn/shop/files/spotwear-recycling-desktop_e43d54be-d301-4f57-9ae9-7d537bc6c21f_1440x.jpg?v=1775246917"
+                            alt="Clarifying AHA BHA Exfoliating Toner"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=85&w=1000&auto=format&fit=crop"
-                            alt="Eyeshadow palette shades"
+                            src="https://www.rhodeskin.com/cdn/shop/files/spotwear-app-1_1440x.jpg?v=1775013189"
+                            alt="Clarifying Exfoliating Liquid"
                             loading="lazy"
                         >
                     </div>
 
-                    <span class="product-tag">EDITOR'S PICK</span>
                     <span class="quick-view">View Details</span>
                 </a>
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Eyeshadow Palette</h3>
+                        <h3>Pimple Patches</h3>
                         <span class="rating">★★★★★ <small>4.8</small></span>
                     </div>
 
                     <p>
-                        Twelve versatile neutrals with buttery, blendable colour payoff.
+                        Gentle daily exfoliator that tightens pores, refines texture, and evens tone.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$48.00</span>
+                        <span class="price">$34.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -323,35 +322,35 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=85&w=1000&auto=format&fit=crop"
-                            alt="Lip Glow Oil"
+                            src="https://www.rhodeskin.com/cdn/shop/files/strawberry-featured_6cadd776-583e-425c-ab12-ba20bf7380b3_1440x.jpg?v=1755975138"
+                            alt="Nourishing Face Oil"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=85&w=1000&auto=format&fit=crop"
-                            alt="Lip Glow Oil texture"
+                            src="https://www.rhodeskin.com/cdn/shop/files/strawberry-ingred_f09043cf-13fe-4e5f-9fe6-30d7df3e29e5_1440x.jpg?v=1755963478"
+                            alt="Nourishing Face Oil droplets"
                             loading="lazy"
                         >
                     </div>
 
-                    <span class="product-tag">NEW</span>
+                    <span class="product-tag">BESTSELLER</span>
                     <span class="quick-view">View Details</span>
                 </a>
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Lip Glow Oil</h3>
+                        <h3>Lip treatment</h3>
                         <span class="rating">★★★★★ <small>4.9</small></span>
                     </div>
 
                     <p>
-                        Nourishing glossy colour with a cushion-soft, hydrated feel.
+                        Cold-pressed botanical elixir that locks in moisture and boosts natural radiance.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$26.00</span>
+                        <span class="price">$44.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -366,15 +365,15 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=85&w=1000&auto=format&fit=crop"
-                            alt="Hydrating Concealer"
+                            src="https://www.rhodeskin.com/cdn/shop/files/rhode-kit-hero-1-desktop_f38933f1-40e5-4590-8f0b-ad685375d133_1440x.jpg?v=1761260561"
+                            alt="Peptide Eye Renewal Cream"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=85&w=1000&auto=format&fit=crop"
-                            alt="Hydrating Concealer application"
+                            src="https://www.rhodeskin.com/cdn/shop/files/rhode-kit-faq_cf435720-62c6-46e9-bd0d-b373aa4c9b82_1440x.jpg?v=1761260561"
+                            alt="Peptide Eye Renewal Cream application"
                             loading="lazy"
                         >
                     </div>
@@ -384,16 +383,16 @@
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Hydrating Concealer</h3>
-                        <span class="rating">★★★★★ <small>4.8</small></span>
+                        <h3>Rhode set</h3>
+                        <span class="rating">★★★★★ <small>4.7</small></span>
                     </div>
 
                     <p>
-                        Flexible medium coverage that smooths and brightens without dryness.
+                        Targeted treatment designed to smooth fine lines, depuff, and brighten dark circles.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$30.00</span>
+                        <span class="price">$42.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -408,34 +407,35 @@
                     <div class="image-wrap">
                         <img
                             class="product-image primary-image"
-                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=85&w=1000&auto=format&fit=crop"
-                            alt="Highlighting Powder"
+                            src="https://www.rhodeskin.com/cdn/shop/files/sun-kissed-set-hero1-desktop_1440x.jpg?v=1780101576"
+                            alt="Overnight Hydrating Mask"
                             loading="lazy"
                         >
 
                         <img
                             class="product-image secondary-image"
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=85&w=1000&auto=format&fit=crop"
-                            alt="Highlighting Powder swatch"
+                            src="https://www.rhodeskin.com/cdn/shop/files/sun-kissed-set-recycling_1440x.jpg?v=1780101924"
+                            alt="Hydrating Mask texture"
                             loading="lazy"
                         >
                     </div>
 
+                    <span class="product-tag">NEW</span>
                     <span class="quick-view">View Details</span>
                 </a>
 
                 <div class="product-info">
                     <div class="product-top">
-                        <h3>Highlighting Powder</h3>
-                        <span class="rating">★★★★★ <small>4.7</small></span>
+                        <h3>Glow set</h3>
+                        <span class="rating">★★★★★ <small>4.8</small></span>
                     </div>
 
                     <p>
-                        Finely milled luminosity that catches the light without glitter.
+                        Plumping gel-mask that replenishes moisture reserves while you sleep for dewier skin.
                     </p>
 
                     <div class="product-bottom">
-                        <span class="price">$32.00</span>
+                        <span class="price">$40.00</span>
                         <button class="add-button" type="button">Add to Cart</button>
                     </div>
                 </div>
@@ -447,39 +447,38 @@
     </section>
 
 
-    <section class="beauty-note" id="skincare">
-        <div class="note-number">01</div>
+    <section class="beauty-note">
+        <div class="note-number">02</div>
 
         <div class="note-content">
-            <span class="section-label">THE BELLE PHILOSOPHY</span>
-            <h2>Makeup should complement your skin, not hide it.</h2>
+            <span class="section-label">THE BELLE SCIENCE</span>
+            <h2>Skincare that works with your skin's natural rhythm.</h2>
         </div>
 
         <p>
-            Clean formulas, comfortable textures and considered colour
-            designed for everyday rituals. Beauty that feels as good
-            as it looks.
+            Biocompatible ingredients, clinical concentration levels, and balanced pH 
+            formulations that respect your skin barrier while targeting your unique concerns.
         </p>
     </section>
 
 
-    <section class="category-preview" id="haircare">
-        <div class="category-card">
+    <section class="category-preview">
+        <div class="category-card featured">
             <span>01</span>
             <h3>Skincare</h3>
-            <a href="#">Explore collection →</a>
+            <a href="#shop">Shop skincare →</a>
         </div>
 
-        <div class="category-card featured">
+        <div class="category-card">
             <span>02</span>
             <h3>Makeup</h3>
-            <a href="#makeup">Shop makeup →</a>
+            <a href="makeup.html">Explore collection →</a>
         </div>
 
         <div class="category-card">
             <span>03</span>
             <h3>Haircare</h3>
-            <a href="#">Explore collection →</a>
+            <a href="haircare.html">Explore collection →</a>
         </div>
     </section>
 
@@ -498,9 +497,9 @@
 
         <div class="footer-column">
             <h4>Shop</h4>
-            <a href="#skincare">Skincare</a>
-            <a href="#makeup">Makeup</a>
-            <a href="#haircare">Haircare</a>
+            <a href="#shop">Skincare</a>
+            <a href="makeup.html">Makeup</a>
+            <a href="haircare.html">Haircare</a>
         </div>
 
         <div class="footer-column">
@@ -526,5 +525,19 @@
 
 </footer>
 
+<div class="cart-overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-drawer-items" id="cartItems"></div>
+  <div class="cart-drawer-footer">
+    <div class="cart-drawer-total"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <button class="cart-checkout-btn" type="button">Checkout</button>
+  </div>
+</aside>
+
+<script src="cart.js"></script>
 </body>
-</html> 
+</html>

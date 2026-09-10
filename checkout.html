@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Belle &amp; Beyond</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<header class="checkout-header">
+  <div class="checkout-header-inner">
+    <a href="landing.html" class="brand">
+      <img src="logo.png" alt="Belle & Beyond logo" class="logo-img">
+      <div class="logo">
+        Belle &amp; Beyond<span>BEAUTY</span>
+      </div>
+    </a>
+    <span class="secure-note">🔒 Secure checkout</span>
+  </div>
+</header>
+
+<main class="checkout-page">
+  <div class="checkout-wrap">
+
+    <div class="checkout-form-col">
+      <a href="landing.html" class="back-link">← Continue shopping</a>
+      <h1>Checkout</h1>
+
+      <form id="checkoutForm" novalidate>
+
+        <section class="checkout-section">
+          <h2>Contact</h2>
+          <div class="field-row">
+            <label>Email
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+          </div>
+        </section>
+
+        <section class="checkout-section">
+          <h2>Shipping address</h2>
+          <div class="field-row two">
+            <label>First name
+              <input type="text" name="firstName" required>
+            </label>
+            <label>Last name
+              <input type="text" name="lastName" required>
+            </label>
+          </div>
+          <div class="field-row">
+            <label>Address
+              <input type="text" name="address" placeholder="Street and house number" required>
+            </label>
+          </div>
+          <div class="field-row three">
+            <label>City
+              <input type="text" name="city" required>
+            </label>
+            <label>State
+              <input type="text" name="state" required>
+            </label>
+            <label>ZIP code
+              <input type="text" name="zip" required>
+            </label>
+          </div>
+          <div class="field-row">
+            <label>Phone
+              <input type="tel" name="phone" placeholder="For delivery updates" required>
+            </label>
+          </div>
+        </section>
+
+        <section class="checkout-section">
+          <h2>Payment</h2>
+          <div class="field-row">
+            <label>Card number
+              <input type="text" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+            </label>
+          </div>
+          <div class="field-row two">
+            <label>Expiry
+              <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required>
+            </label>
+            <label>CVC
+              <input type="text" name="cvc" inputmode="numeric" maxlength="4" required>
+            </label>
+          </div>
+        </section>
+
+        <button type="submit" class="place-order-btn" id="placeOrderBtn">Place Order</button>
+        <p class="checkout-fineprint">This is a demo checkout — no payment is actually processed.</p>
+      </form>
+    </div>
+
+    <aside class="checkout-summary-col">
+      <h2>Order summary</h2>
+      <div class="summary-items" id="summaryItems">
+        <div class="summary-empty">Your cart is empty.</div>
+      </div>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="summarySubtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="summaryShipping">$0.00</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="summaryTotal">$0.00</span>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<div class="order-overlay" id="orderOverlay"></div>
+<div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+  <div class="order-modal-icon">✓</div>
+  <h2 id="orderModalTitle">Order placed!</h2>
+  <p>Thanks — your order <strong id="orderNumber">#BB-00000</strong> is confirmed.<br>A receipt has been sent to your email.</p>
+  <a href="landing.html" class="order-modal-btn">Continue shopping</a>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>
